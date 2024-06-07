@@ -2,6 +2,16 @@
 import { ref } from "vue";
 import { useFetch } from "nuxt/app";
 
+useHead({
+  title: 'Pokemon name generator',
+  meta: [
+    {
+      name: 'description',
+      content: 'Welcome to Pokemon Name Generator, your ultimate tool for generating random Pokemon names! Our service helps you find unique and fun names for your Pokemon adventures. Simply click the button and get a random Pokemon name instantly.'
+    }
+  ]
+})
+
 const pokemonName = ref("");
 
 const submit = async () => {
@@ -12,13 +22,17 @@ const submit = async () => {
     console.error(error.value);
   }
 };
+function copyName() {
+  navigator.clipboard.writeText( pokemonName.value);
+  return alert("Copied")
+}
 </script>
 
 <template>
   <header class="relative h-[350px] w-full">
     <div class="overlay"></div>
     <h1
-      class="absolute w-full text-center left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] z-[100] text-5xl md:text-7xl text-black font-semibold"
+      class="absolute w-full text-center bg-[#ffdd009c]  py-4 left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] z-[100] text-5xl md:text-8xl font-semibold"
     >
       Pokemon Name generator
     </h1>
@@ -27,9 +41,7 @@ const submit = async () => {
     class="max-w-[1000px] px-4 md:px-0 mx-auto my-14 flex flex-col items-center justify-center"
   >
     <p class="text-center text-2xl">
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas
-      incidunt molestias repudiandae qui. Dolore quas iusto quibusdam quo est
-      atque ab in neque voluptates soluta. Aliquam non quasi delectus! Soluta.
+      Welcome to Pokemon Name Generator, your ultimate tool for generating random Pokemon names! Our service helps you find unique and fun names for your Pokemon adventures. Simply click the button and get a random Pokemon name instantly.
     </p>
     <button
       class="mt-10 bg-[#ffde00] text-[#000] font-semibold text-xl px-4 py-2 rounded-md cursor-pointer"
@@ -37,11 +49,13 @@ const submit = async () => {
     >
       Random Name
     </button>
-    <h3
-      class="output text-4xl font-bold tracking-wider my-10"
-    >
-      {{ pokemonName }}
-    </h3>
+      <h3 v-if="pokemonName.length" class="relative text-4xl font-bold tracking-wider my-10">
+        {{ pokemonName }}
+        <div class="absolute right-[-24px] top-1 cursor-pointer" @click="copyName">
+          <icon class="absolute right-[-4px] top-2 h-4 w-4 rounded-sm border border-solid bg-white border-[#000]"></icon>
+          <icon class="absolute right-[-10px] top-3 h-4 w-4 rounded-sm border border-solid bg-white border-[#000]"></icon>
+        </div>
+      </h3>
   </article>
 </template>
 
@@ -55,6 +69,13 @@ blue: #3b4cca
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  font-family: "Space Grotesk", sans-serif;
+  position: relative;
 }
 header {
   display: flex;
@@ -74,10 +95,10 @@ header {
   position: absolute;
   z-index: 10;
 }
-.output {
+.pokemon_text {
   color: #3b4cca;
   -webkit-text-fill-color: #ffde00;
-  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-width: 0.1px;
   -webkit-text-stroke-color: #3b4cca;
 }
 </style>
