@@ -1,6 +1,9 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
+  site: {
+    url: "https://pokemonnamegenerator.com/"
+  },
   modules: [[
     "@nuxtjs/google-fonts",
     {
@@ -8,7 +11,7 @@ export default defineNuxtConfig({
         "Space+Grotesk": true,
       },
     },
-  ], "@nuxtjs/sitemap", "nuxt-gtag"],
+  ], "@nuxtjs/sitemap", "nuxt-gtag", '@nuxtjs/robots'],
   css: ["~/assets/css/main.css"],
   gtag: {
     id: 'G-S3M8DCNFCK'
