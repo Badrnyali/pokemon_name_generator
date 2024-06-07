@@ -86,6 +86,7 @@ header {
   background-size: cover;
   background-position: center;
 }
+
 .overlay {
   background: #ffdd0038;
   left: 0;

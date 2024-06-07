@@ -8,8 +8,11 @@ export default defineNuxtConfig({
         "Space+Grotesk": true,
       },
     },
-  ], "@nuxtjs/sitemap"],
+  ], "@nuxtjs/sitemap", "nuxt-gtag"],
   css: ["~/assets/css/main.css"],
+  gtag: {
+    id: 'G-S3M8DCNFCK'
+  },
   postcss: {
     plugins: {
       tailwindcss: {},
