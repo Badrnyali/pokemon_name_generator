@@ -3,11 +3,15 @@ import { ref } from "vue";
 import { useFetch } from "nuxt/app";
 
 useHead({
-  title: 'Pokemon name generator',
+  title: 'Pokemon name generator - Generate random names',
+  link: {
+    rel: 'canonical',
+    href: 'https://pokemonnamegenerator.com', 
+  },
   meta: [
     {
       name: 'description',
-      content: 'Welcome to Pokemon Name Generator, your ultimate tool for generating random Pokemon names! Our service helps you find unique and fun names for your Pokemon adventures. Simply click the button and get a random Pokemon name instantly.'
+      content: 'Welcome to Pokemon Name Generator, your tool for generating random Pokemon names! Our service helps you find unique and fun names for your Pokemon.'
     }
   ]
 })
