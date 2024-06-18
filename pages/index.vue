@@ -100,7 +100,7 @@ function copyName() {
       </div>
       <div class="w-full flex flex-col text-left items-center justify-center">
         <h2 class="text-4xl mt-14 mb-4">
-          The History of Pokemon: A Timeless Adventure
+          The History of Pokemon
         </h2>
         <p class="text-lg mb-2 tracking-wide">
           Created by Satoshi Tajiri and Ken Sugimori in 1996, Pokemon became a
