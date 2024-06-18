@@ -75,11 +75,11 @@ function copyName() {
             ></icon>
           </div>
         </h3>
-        <p class="text-xl tracking-wide">
+        <p class="text-xl tracking-wide text-center">
           <span class="font-bold">{{ pokemonName.name }} is</span>
           {{ pokemonName.description.toLowerCase() }}
         </p>
-        <p class="text-xl tracking-wide">
+        <p class="text-xl tracking-wide text-center">
           <span class="font-bold"
             >Special skills of {{ pokemonName.name }} are
           </span>
