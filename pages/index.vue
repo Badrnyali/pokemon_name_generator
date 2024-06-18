@@ -36,7 +36,7 @@ function copyName() {
 <template>
   <main>
     <article
-      class="max-w-[1000px] px-4 md:px-0 mx-auto my-14 flex flex-col items-center justify-center"
+      class="max-w-[1000px] px-4 md:px-0 mx-auto my-14 flex flex-col items-center justify-center min-h-[300px]"
     >
       <p class="text-center text-2xl">
         Welcome to Pokemon Name Generator, your ultimate tool for generating
