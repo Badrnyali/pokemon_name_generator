@@ -9,6 +9,7 @@ useHead({
     rel: "canonical",
     href: "https://pokemonnamegenerator.com",
   },
+  link: [{ rel: 'icon', href: '/favicon.ico' }],
   meta: [
     {
       name: "description",
@@ -112,7 +113,7 @@ function copyName() {
         <figure class="my-4 mb-8">
           <img
             src="/public/founders.jpg"
-            class="min-h-[300px] object-contain"
+            class="h-[300px] w-[300px] md:w-[400px] object-contain"
             alt="Founders of pokemon"
             title="Founders of pokemon"
           />
