@@ -9,7 +9,7 @@
     <h1
       class="absolute w-full text-center bg-[#ffdd009c] py-4 left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] z-[100] text-5xl md:text-8xl font-semibold"
     >
-      Pokemon Name generator
+    Random Pokemon Name Generator
     </h1>
   </header>
 </template>

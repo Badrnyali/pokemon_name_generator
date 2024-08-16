@@ -46,9 +46,9 @@ function copyName() {
     >
       <p class="text-center text-2xl">
         Welcome to Pokemon Name Generator, your ultimate tool for generating
-        random Pokemon names! Our service helps you find unique and fun names
+        random Pokemon names! Our service helps you find unique and fun nickname
         for your Pokemon adventures. Simply click the button and get a random
-        name instantly.
+        nickname instantly.
       </p>
       <button
         :class="{ 'pointer-events-none': submited }"
