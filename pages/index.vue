@@ -5,11 +5,11 @@ import { useFetch } from "nuxt/app";
 const submited = ref(false);
 useHead({
   title: "Pokemon name generator - Generate random names",
-  link: {
+  link: [{
     rel: "canonical",
     href: "https://pokemonnamegenerator.com",
   },
-  link: [{ rel: 'icon', href: '/favicon.ico' }],
+  { rel: 'icon', href: '/favicon.ico' }],
   meta: [
     {
       name: "description",
