@@ -4,6 +4,9 @@
       <li class="cursor-pointer underline text-xs">
         <NuxtLink to="/privacy-policy" rel="nofollow">Privacy Policy</NuxtLink>
       </li>
+      <li class="cursor-pointer underline text-xs">
+        <NuxtLink to="https://robotnamegenerator.com/" target="_blank">Robot Name Generator</NuxtLink>
+      </li>
     </ul>
   </footer>
 </template>
